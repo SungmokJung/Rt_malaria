@@ -90,16 +90,6 @@ gi_fit=list(shape=2.305, scale=5.452)
 generation<-function(t){pweibull(t, shape=gi_fit$shape, scale=gi_fit$scale)-
     pweibull(t-1, shape=gi_fit$shape, scale=gi_fit$scale)}
 
-# norm_fit=list(meanlog=1.519, sdlog=0.615)
-# normal_dist<-function(t){plnorm(t, norm_fit$meanlog, norm_fit$sdlog)-
-#     plnorm(t-1, norm_fit$meanlog, norm_fit$sdlog)}
-# 
-# ## 발병~진단 distribution
-# rep_fit=list(shape=1.741, scale=8.573)
-# uni<-function(t){pweibull(t, shape=rep_fit$shape, scale=rep_fit$scale)-
-#     pweibull(t-1, shape=rep_fit$shape, scale=rep_fit$scale)}
-# 
-
 # generation<-function(r){
 #   ifelse(r<30,0, normal_dist(r-30))
 # }
